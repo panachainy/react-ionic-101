@@ -38,6 +38,8 @@ After the user navigates to Tab 2 (Photos), they can tap/click on the camera but
 
 ## Additional Note
 
+check info of ionic: `ionic info`
+
 ### Run IOS
 
 [Official Guide](https://ionicframework.com/docs/developing/ios)
@@ -48,3 +50,23 @@ If you have error can't build project in Xcode or CLI try to change `IPHONEOS_DE
 
 `ionic capacitor run ios -l --external`
 
+### Android
+
+Should't install android studio with `JetBrains Toolbox`
+because path is wrong and CLI will be do mistake (I try too custom CAPACITOR_ANDROID_STUDIO_PATH is not work too.)
+
+If you cannot found android devices after run `ionic capacitor run android --list` (make sure you already create android emulator)
+
+   1. `npm update native-run`
+   2. verify with `ionic capacitor run android --list` or `native-run android --list`
+
+#### Command android
+
+* open in android studio `ionic capacitor open android`
+* `ionic capacitor build android`
+* `ionic capacitor run android -l --host=YOUR_IP_ADDRESS`
+
+## Get ip
+
+`Ipconfig getifaddr en1` - IP address for a wired Ethernet connection.
+`ipconfig getifaddr en0` - IP address of your wireless connection.
